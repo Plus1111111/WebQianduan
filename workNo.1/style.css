@@ -1,0 +1,98 @@
+/* 全局基础样式：统一盒模型并设置页面背景 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    color: #24313a;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: #eef3f2;
+}
+
+/* 名片主体：居中、简洁，并通过阴影建立层次 */
+.business-card {
+    width: min(100%, 380px);
+    padding: 42px 36px 38px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid rgba(36, 49, 58, 0.06);
+    border-radius: 12px;
+    box-shadow: 0 14px 35px rgba(45, 67, 74, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 鼠标悬停时轻微上浮，增强交互反馈 */
+.business-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 42px rgba(45, 67, 74, 0.18);
+}
+
+/* 圆形头像 */
+.avatar {
+    width: 92px;
+    height: 92px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 600;
+    background: #6f9b91;
+    border-radius: 50%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.job-title {
+    margin: 10px 0 30px;
+    color: #6f7d83;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/* 联系方式区域使用纵向列表，方便阅读与点击 */
+.contact-list {
+    display: grid;
+    gap: 14px;
+    padding-top: 24px;
+    border-top: 1px solid #e8eded;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #52636a;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.contact-item:hover {
+    color: #47796e;
+}
+
+.contact-icon {
+    width: 20px;
+    color: #6f9b91;
+    font-size: 16px;
+}
+
+/* 在较窄的屏幕上适当收紧卡片内边距 */
+@media (max-width: 420px) {
+    .business-card {
+        padding: 34px 24px 30px;
+    }
+}
